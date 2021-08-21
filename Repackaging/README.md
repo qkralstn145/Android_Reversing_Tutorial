@@ -11,16 +11,21 @@
 APK파일은 ZIP 파일 포맷으로 구성되어 있으며, 크게 아래와 같은 구성요소들을 갖고 있다.
 
   1./META-INF: 해당 앱을 배포할 때 개발자의 인증서를 통해 서명한 내용을 담고 있다.
+  
   2./res: 컴파일되지 않는 앱의 리소스들이 포함되어 있다. ( ex: 이미지)
+  
   3.AndroidManifest.xml: 해당 앱에 대한 설명, 실행 권한, 앱 구성 요소(Components)들에 대한 정보들을 담고 있다.
+  
   4.classes.dex: Dalvik 가상머신에서 동작할 수 있도록 만들어진 바이너리 코드 형태의 실행 파일
+  
   5.resources.arsc: 컴파일된 리소스 파일
 
 ### 안드로이드 정적 분석
 안드로이드 정적 분석은 크게 두 가지를 확인하는 경우가 존재한다.
 
   1.	Dalvik Layer: Android API에 대한 정보, Dalvik bytecode instruction
-  2.	Native Layer: ELF structure, ARM/x86 instruction
+  2.	
+  3.	Native Layer: ELF structure, ARM/x86 instruction
 
 안드로이드는 Java와 C/C++ 언어를 통해 앱 제작이 가능하다. 그렇기에 확인 가능한 Layer 역시 두 가지가 존재하며 이를 Dalvik Layer와 Native Layer로 볼 수 있다.
 해당 예제에서는 Dalvik Layer에서만 정적 분석을 실시하며 Native Layer에 대한 내용은 따로 다루지 않는다. 이전 튜토리얼에서 확인했듯이 Java code와 Smali code를 통해서 정적 분석이 가능하며, 역공학을 할 수 있도록 도와주는 도구로 JD-GUI, apktool, dex2jar 등이 존재한다.
@@ -33,10 +38,13 @@ Native Layer에서는 ELF Structure와 ARM/x86의 instruction 정보들을 확�
 이러한 리패키징은 아래와 같은 방식들을 통하여 앱을 수정할 수 있게 된다.
 
   1.	정적 분석 도구를 통한 Java code와 Smali code 분석/동적 분석 도구를 통한 앱 기능 분석 => 정보 수집
+  
   2.	Smali code 혹은 xml 파일 수정
+  
   3.	수정한 APK 파일을 커스텀 키를 통해 리패키징
+  
   4.	변경된 내용이 정확히 동작하는지 확인
-  5.	
+  
 위에 설명한 4가지 방식을 통해 리패키징을 진행할 수 있다. 
 
 ### 루팅 탐지
