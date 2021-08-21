@@ -24,8 +24,8 @@ APK파일은 ZIP 파일 포맷으로 구성되어 있으며, 크게 아래와 �
 안드로이드 정적 분석은 크게 두 가지를 확인하는 경우가 존재한다.
 
   1.	Dalvik Layer: Android API에 대한 정보, Dalvik bytecode instruction
-  2.	
-  3.	Native Layer: ELF structure, ARM/x86 instruction
+	
+  2.	Native Layer: ELF structure, ARM/x86 instruction
 
 안드로이드는 Java와 C/C++ 언어를 통해 앱 제작이 가능하다. 그렇기에 확인 가능한 Layer 역시 두 가지가 존재하며 이를 Dalvik Layer와 Native Layer로 볼 수 있다.
 해당 예제에서는 Dalvik Layer에서만 정적 분석을 실시하며 Native Layer에 대한 내용은 따로 다루지 않는다. 이전 튜토리얼에서 확인했듯이 Java code와 Smali code를 통해서 정적 분석이 가능하며, 역공학을 할 수 있도록 도와주는 도구로 JD-GUI, apktool, dex2jar 등이 존재한다.
