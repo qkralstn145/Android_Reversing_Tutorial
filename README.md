@@ -24,6 +24,6 @@ https://developer.android.com/guide/components/services?hl=ko#Lifecycle
 브로드캐스트 리시버
 https://developer.android.com/guide/components/broadcasts?hl=ko
 
-콘텐츠 프로바이더
+콘텐츠 프로바이더 
 생명주기 없음.
 https://developer.android.com/guide/topics/providers/content-provider-basics?hl=ko
